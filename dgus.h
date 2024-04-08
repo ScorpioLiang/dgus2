@@ -25,7 +25,8 @@ extern "C" {
 #endif
 
 /* 头文件 */
-#include "main.h"
+#include <stdint.h>
+#include <string.h>
 
 /* dgus结构体 */
 typedef struct DGUS_Display_t {

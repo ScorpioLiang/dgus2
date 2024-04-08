@@ -23,9 +23,9 @@
   ******************************************************************************
   */
 #include "dgus.h"
-#include <string.h>
 
 /*********************************用户接口*************************************/
+#include "main.h"
 extern UART_HandleTypeDef huart2;
 void DGUS_SerialSend(uint8_t *pdata, size_t Size)
 {
@@ -68,11 +68,8 @@ static inline void _JoinDataFrames(uint8_t *tx_data, uint16_t addr, void *data, 
     tx_data[5] = addr       & 0xFF;
 
     for (int i = 0; i < size - 6; i++) {
-#ifdef __ARMCC_VERSION
         tx_data[i + 6] = *((uint8_t *)data + ((size - 7) - i)); /* 小端 MSB*/
-#elif __C51__
-        tx_data[i + 6] = *((uint8_t *)data + i));   /* 大端 LSB */
-#endif
+        /* tx_data[i + 6] = *((uint8_t *)data + i));              大端 LSB */
     }
 }
 
@@ -331,6 +328,6 @@ void TextDisplaySetFontDots(DGUS_Display_t *dgus, uint16_t sp_addr, uint16_t Fon
   */
 void BuzzerSet(DGUS_Display_t *dgus, uint16_t mstime)
 {
-    dgus->DGUS_Send2Data(dgus, 0x00A0, mstime >> 3);
+    _Send2Bytes(dgus, 0x00A0, mstime >> 3);
 }
 /**************************END 蜂鸣器 Buzzer END*******************************/
