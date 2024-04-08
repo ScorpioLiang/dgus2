@@ -1,0 +1,131 @@
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+
+# keil5的.gitignore忽略文件
+
+# Prerequisites - 依赖文件
+*.d
+*.dep
+
+# Object files - 目标文件
+*.o
+*.obj
+*.OBJ
+*.axf
+*.bak
+*.crf
+*.elf
+*.htm
+*.iex
+*.sbr
+
+# Listing Files - 列表文件
+*.COD
+*.cod
+*.[Ii]
+*.LST
+*.lst
+*.MAP
+*.map
+*.[Mm]51
+*.[Mm]66
+
+# LINK output - 链接输出
+*.ABS
+
+# Libraries - 库文件
+*.lib
+*.LIB
+
+# uv output - 
+*.lnp
+*.bin
+*.h86
+
+# Build Files - 构建文件
+*._IA
+*.__[Ii]
+*._[Ii][Ii]
+*.SCR
+*.scr
+
+# Project Files - 项目文件
+*.uvgui.*
+*.uvguix.*
+
+# JLink Files - JLink文件
+JLinkLog.txt
+*JLinkLog.txt
+*JLinkSettings.ini
+ 
+# Temporary files - 临时文件
+~$*
+*.tmp
+*.TMP
+
+# Other files - 其他文件
+*.ddk
+*.edk
+*.mpf
+*.mpj
+*.omf
+*.plg
+*.rpt
+*.__i
+*.tra
+*.sct
+*.dbgconf
+*.scvd
+
+*.workspace
